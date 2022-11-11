@@ -15,6 +15,7 @@ public class TopicoDTO {
     public TopicoDTO(Topico topico) {
         this.id = topico.getId();
         this.titulo = topico.getTitulo();
+        this.mensagem = topico.getMensagem();
         this.dataCriacao = topico.getDataCriacao();
     }
 
