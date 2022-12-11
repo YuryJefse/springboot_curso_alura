@@ -46,6 +46,8 @@ public class SecurityConfigurations {
                 .antMatchers(HttpMethod.GET, "/topicos").permitAll()
                 .antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/auth").permitAll()
+                .antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
+                .antMatchers("/swagger-ui/**", "/javainuse-openapi/**", "/context-path/**").permitAll()
                 .anyRequest().authenticated().and()
                 .authenticationManager(authenticationManager).csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
